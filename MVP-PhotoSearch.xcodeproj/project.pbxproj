@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88C4F8E734C4AF5AAEA31D8A /* Pods_MVP_PhotoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1619C33488D1B08DBBE642 /* Pods_MVP_PhotoSearch.framework */; };
 		8F39A5D42681A1420083C186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39A5D32681A1420083C186 /* AppDelegate.swift */; };
 		8F39A5DD2681A1440083C186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F39A5DC2681A1440083C186 /* Assets.xcassets */; };
 		8F39A5E02681A1440083C186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F39A5DE2681A1440083C186 /* LaunchScreen.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		565F4897F73D99F2C2767E7F /* Pods-MVP-PhotoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-PhotoSearch.release.xcconfig"; path = "Target Support Files/Pods-MVP-PhotoSearch/Pods-MVP-PhotoSearch.release.xcconfig"; sourceTree = "<group>"; };
 		8F39A5D02681A1420083C186 /* MVP-PhotoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-PhotoSearch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F39A5D32681A1420083C186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F39A5DC2681A1440083C186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		8F39A5E12681A1440083C186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F39A5E72681A2C80083C186 /* SearchPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewController.swift; sourceTree = "<group>"; };
 		8F39A5E92681A2DC0083C186 /* SearchPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchPhoto.storyboard; sourceTree = "<group>"; };
+		AB1619C33488D1B08DBBE642 /* Pods_MVP_PhotoSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVP_PhotoSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC444B11717352B984D1ECB1 /* Pods-MVP-PhotoSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-PhotoSearch.debug.xcconfig"; path = "Target Support Files/Pods-MVP-PhotoSearch/Pods-MVP-PhotoSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C4F8E734C4AF5AAEA31D8A /* Pods_MVP_PhotoSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63C0C4BA1445BE9F7C1A27C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB1619C33488D1B08DBBE642 /* Pods_MVP_PhotoSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		733FCD2E79C028268C668B42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC444B11717352B984D1ECB1 /* Pods-MVP-PhotoSearch.debug.xcconfig */,
+				565F4897F73D99F2C2767E7F /* Pods-MVP-PhotoSearch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F39A5C72681A1420083C186 = {
 			isa = PBXGroup;
 			children = (
 				8F39A5D22681A1420083C186 /* MVP-PhotoSearch */,
 				8F39A5D12681A1420083C186 /* Products */,
+				733FCD2E79C028268C668B42 /* Pods */,
+				63C0C4BA1445BE9F7C1A27C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F39A5E42681A1440083C186 /* Build configuration list for PBXNativeTarget "MVP-PhotoSearch" */;
 			buildPhases = (
+				90C561F25019A869A493176C /* [CP] Check Pods Manifest.lock */,
 				8F39A5CC2681A1420083C186 /* Sources */,
 				8F39A5CD2681A1420083C186 /* Frameworks */,
 				8F39A5CE2681A1420083C186 /* Resources */,
+				64D7C33104F1E1E90F5CF9D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64D7C33104F1E1E90F5CF9D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVP-PhotoSearch/Pods-MVP-PhotoSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVP-PhotoSearch/Pods-MVP-PhotoSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVP-PhotoSearch/Pods-MVP-PhotoSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C561F25019A869A493176C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVP-PhotoSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F39A5CC2681A1420083C186 /* Sources */ = {
@@ -279,6 +348,7 @@
 		};
 		8F39A5E52681A1440083C186 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC444B11717352B984D1ECB1 /* Pods-MVP-PhotoSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +369,7 @@
 		};
 		8F39A5E62681A1440083C186 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565F4897F73D99F2C2767E7F /* Pods-MVP-PhotoSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
