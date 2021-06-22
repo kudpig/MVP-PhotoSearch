@@ -55,9 +55,35 @@
                                             <constraint firstAttribute="bottom" secondItem="L8B-oX-Oja" secondAttribute="bottom" id="sa1-7X-ddh"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skh-8W-m4Y" userLabel="MarginView">
+                                        <rect key="frame" x="0.0" y="42" width="414" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="LkQ-r7-q9N"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnh-d4-uHM" userLabel="CollectionArea">
-                                        <rect key="frame" x="0.0" y="42" width="414" height="766"/>
+                                        <rect key="frame" x="0.0" y="52" width="414" height="756"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-zf-uaT">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Fd-ej-QgS">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="i9C-zf-uaT" secondAttribute="bottom" id="3OX-TO-iqf"/>
+                                            <constraint firstItem="i9C-zf-uaT" firstAttribute="top" secondItem="fnh-d4-uHM" secondAttribute="top" id="6BD-h2-L4m"/>
+                                            <constraint firstItem="i9C-zf-uaT" firstAttribute="leading" secondItem="fnh-d4-uHM" secondAttribute="leading" id="D4G-Cy-bBH"/>
+                                            <constraint firstAttribute="trailing" secondItem="i9C-zf-uaT" secondAttribute="trailing" id="KRZ-DT-Nmw"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5w8-0X-bhd" userLabel="MarginView">
                                         <rect key="frame" x="0.0" y="808" width="414" height="10"/>
@@ -78,6 +104,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xmm-Vr-nN5" secondAttribute="trailing" id="v0h-Mb-Ctd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoCollectionView" destination="i9C-zf-uaT" id="1vh-cg-WhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
