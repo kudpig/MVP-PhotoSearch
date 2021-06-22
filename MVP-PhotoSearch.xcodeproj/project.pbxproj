@@ -55,13 +55,21 @@
 			isa = PBXGroup;
 			children = (
 				8F39A5D32681A1420083C186 /* AppDelegate.swift */,
+				8F39A5EC2681A4580083C186 /* ViewController */,
 				8F39A5DC2681A1440083C186 /* Assets.xcassets */,
 				8F39A5DE2681A1440083C186 /* LaunchScreen.storyboard */,
 				8F39A5E12681A1440083C186 /* Info.plist */,
+			);
+			path = "MVP-PhotoSearch";
+			sourceTree = "<group>";
+		};
+		8F39A5EC2681A4580083C186 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				8F39A5E72681A2C80083C186 /* SearchPhotoViewController.swift */,
 				8F39A5E92681A2DC0083C186 /* SearchPhoto.storyboard */,
 			);
-			path = "MVP-PhotoSearch";
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
