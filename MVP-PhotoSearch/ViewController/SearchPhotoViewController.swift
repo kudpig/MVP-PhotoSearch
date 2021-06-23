@@ -8,8 +8,21 @@
 import UIKit
 
 class SearchPhotoViewController: UIViewController {
-
-    @IBOutlet weak var photoCollectionView: UICollectionView! {
+    
+    @IBOutlet private weak var searchTextField: UITextField!
+    
+    @IBOutlet private weak var searchButton: UIButton! {
+        didSet {
+            searchButton.addTarget(self, action: #selector(tapSearchButton(_:)), for: .touchUpInside)
+        }
+    }
+    
+    @objc private func tapSearchButton(_ button: UIButton) {
+        let parameters = PhotoSearchParameters.init(searchWord: searchTextField.text)
+        self.presenter.search(parameters: parameters)
+    }
+    
+    @IBOutlet private weak var photoCollectionView: UICollectionView! {
         didSet {
             photoCollectionView.register(UINib(nibName: PhotoCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
             
@@ -22,11 +35,28 @@ class SearchPhotoViewController: UIViewController {
         }
     }
     
+    private var presenter: SearchPresenterInput!
+    func inject(presenter: SearchPresenterInput) {
+        self.presenter = presenter
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+}
+
+extension SearchPhotoViewController: SearchPresenterOutput {
+    
+    func update(photoModels: [PhotoModel]) {
+        print("プレゼンターから検索結果を受け取りました：\(photoModels.count)")
+    }
+    
+    func get(error: Error) {
+        print("プレゼンターからエラーを受け取りました：\(error.localizedDescription)")
+    }
+    
 }
 
 extension SearchPhotoViewController: UICollectionViewDataSource {
@@ -57,5 +87,5 @@ extension SearchPhotoViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SearchPhotoViewController: UICollectionViewDelegate {
-    
+    // cell.didSelect
 }

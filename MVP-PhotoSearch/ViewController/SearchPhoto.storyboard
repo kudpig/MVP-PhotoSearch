@@ -106,6 +106,8 @@
                     </view>
                     <connections>
                         <outlet property="photoCollectionView" destination="i9C-zf-uaT" id="1vh-cg-WhX"/>
+                        <outlet property="searchButton" destination="TTU-6J-EyI" id="RlL-Qs-x0t"/>
+                        <outlet property="searchTextField" destination="gHf-cC-Neq" id="zce-Hu-7cc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
