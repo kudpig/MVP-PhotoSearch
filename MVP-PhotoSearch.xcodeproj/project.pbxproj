@@ -92,11 +92,11 @@
 			children = (
 				8F39A5D32681A1420083C186 /* AppDelegate.swift */,
 				8F39A5F5268242C40083C186 /* Router.swift */,
-				8F39A5F7268250520083C186 /* PhotoAPI.swift */,
+				8F39A5FC2682DD460083C186 /* API */,
+				8F39A5F226823E690083C186 /* Model */,
 				8F39A5F92682646E0083C186 /* Presenter */,
 				8F39A5ED2681B2650083C186 /* View */,
 				8F39A5EC2681A4580083C186 /* ViewController */,
-				8F39A5F226823E690083C186 /* Model */,
 				8F39A5DC2681A1440083C186 /* Assets.xcassets */,
 				8F39A5DE2681A1440083C186 /* LaunchScreen.storyboard */,
 				8F39A5E12681A1440083C186 /* Info.plist */,
@@ -136,6 +136,14 @@
 				8F39A5FA268264C80083C186 /* SearchPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8F39A5FC2682DD460083C186 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8F39A5F7268250520083C186 /* PhotoAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

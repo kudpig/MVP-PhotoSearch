@@ -22,7 +22,6 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9y-MC-Rd4" userLabel="MarginView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="Xih-SN-BFp"/>
                                         </constraints>
@@ -47,7 +46,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="L8B-oX-Oja" secondAttribute="trailing" constant="10" id="6xV-yV-CzB"/>
                                             <constraint firstItem="L8B-oX-Oja" firstAttribute="top" secondItem="VF4-3t-hYz" secondAttribute="top" id="iPg-up-KSe"/>
@@ -57,7 +55,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skh-8W-m4Y" userLabel="MarginView">
                                         <rect key="frame" x="0.0" y="42" width="414" height="10"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="LkQ-r7-q9N"/>
                                         </constraints>
@@ -68,7 +65,7 @@
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-zf-uaT">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Fd-ej-QgS">
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3Fd-ej-QgS">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -77,7 +74,6 @@
                                                 <cells/>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="i9C-zf-uaT" secondAttribute="bottom" id="3OX-TO-iqf"/>
                                             <constraint firstItem="i9C-zf-uaT" firstAttribute="top" secondItem="fnh-d4-uHM" secondAttribute="top" id="6BD-h2-L4m"/>
@@ -87,7 +83,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5w8-0X-bhd" userLabel="MarginView">
                                         <rect key="frame" x="0.0" y="808" width="414" height="10"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="j7U-lS-mII"/>
                                         </constraints>
@@ -119,15 +114,6 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

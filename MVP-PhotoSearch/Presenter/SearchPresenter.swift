@@ -17,6 +17,7 @@ protocol SearchPresenterInput: AnyObject {
 // 出力
 protocol SearchPresenterOutput: AnyObject {
     func update(photoModels: [PhotoModel])
+    func displayUpdate(loading: Bool)
     func get(error: Error)
 }
 
@@ -43,14 +44,15 @@ extension SearchPresenter: SearchPresenterInput {
     func item(index: Int) -> PhotoModel { photoModels[index] }
     
     func search(parameters: PhotoSearchParameters) {
-        print("VCから\(parameters)を受けとりました")
         
+        self.output?.displayUpdate(loading: true)
         // ここからAPI叩いていく
         self.api.get(parameters: parameters, completion: { [weak self] (result) in
             // resultの内容で処理を分岐させる
             switch result {
             case .success(let photoModels): // resultデータに`photoModels`という定数名をつけた
                 self?.photoModels = photoModels
+                self?.output?.displayUpdate(loading: false)
                 self?.output?.update(photoModels: photoModels)
             case .failure(let error):
                 self?.output?.get(error: error)
