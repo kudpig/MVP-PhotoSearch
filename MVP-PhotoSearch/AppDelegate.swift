@@ -16,13 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        
-        let storyboard = UIStoryboard(name: "SearchPhoto", bundle: nil)
-        let vc = storyboard.instantiateInitialViewController() as! SearchPhotoViewController
-        let nav = UINavigationController(rootViewController: vc)
-        
-        window.rootViewController = nav
-        window.makeKeyAndVisible()
+        Router.showRoot(window: window)
         
         return true
     }
