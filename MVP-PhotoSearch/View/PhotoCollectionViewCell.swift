@@ -12,7 +12,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     static var identifier: String { String(describing: PhotoCollectionViewCell.self) }
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -48,6 +48,9 @@ final class PhotoAPI {
     static let shared = PhotoAPI()
     private init() {}
     
+    private let baseURL = "https://api.unsplash.com"
+    private let searchEndPoint = "/search/photos?"
+    
     func get(parameters: PhotoSearchParameters, completion: ((Result<[PhotoModel], APIResponseError>) -> Void)? = nil) {
         
         guard parameters.validation else {
@@ -55,7 +58,7 @@ final class PhotoAPI {
             return
         }
         
-        guard let url = URL(string: "https://api.unsplash.com/search/photos?\(parameters.queryParameter)") else {
+        guard let url = URL(string: "\(baseURL)"+"\(searchEndPoint)"+"\(parameters.queryParameter)") else {
             completion?(.failure(.urlError))
             return
         }
