@@ -30,7 +30,7 @@ final class SearchPresenter {
     private var photoModels: [PhotoModel] = [] // APIを叩いた結果のsuccessデータの保持用
 
     init(output: SearchPresenterOutput) {
-        self.output = output
+        self.output = output // 外部からプレゼンターを呼び出すときに(init)プロトコルに準拠していることを保証する
     }
 }
 
