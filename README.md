@@ -230,7 +230,7 @@ extension SearchPresenter: SearchPresenterInput {
 ```swift
 import UIKit
 
-class SearchPhotoViewController: UIViewController {
+final class SearchPhotoViewController: UIViewController {
     
     @IBOutlet private weak var searchTextField: UITextField! {
         didSet {
@@ -340,7 +340,7 @@ extension SearchPhotoViewController: UITextFieldDelegate {
 import UIKit
 import AlamofireImage
 
-class PhotoCollectionViewCell: UICollectionViewCell {
+final class PhotoCollectionViewCell: UICollectionViewCell {
 
     static var identifier: String { String(describing: PhotoCollectionViewCell.self) }
     
