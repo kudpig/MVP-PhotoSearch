@@ -14,7 +14,7 @@ final class Router {
         let vc = storyboard.instantiateInitialViewController() as! SearchPhotoViewController
         let nav = UINavigationController(rootViewController: vc)
         
-        let presenter = SearchPresenter(output: vc)
+        let presenter = SearchPresenter(output: vc) // outputプロトコルに準拠しているものをプレゼンターの出力先として設定する
         vc.inject(presenter: presenter)
         
         window?.rootViewController = nav
