@@ -40,7 +40,8 @@ class SearchPhotoViewController: UIViewController {
         self.presenter.search(parameters: parameters)
     }
     
-    private var presenter: SearchPresenterInput!
+    private var presenter: SearchPresenterInput! // SearchPresenterInputプロトコルに準拠されているものをpresenterとして持つ
+    // injectメソッドによって、output先が登録済のpresenterインスタンスが設定される
     func inject(presenter: SearchPresenterInput) {
         self.presenter = presenter
     }
