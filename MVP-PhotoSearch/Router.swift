@@ -15,7 +15,7 @@ final class Router {
         let nav = UINavigationController(rootViewController: vc)
         
         let presenter = SearchPresenter(output: vc) // outputプロトコルに準拠しているものをプレゼンターの出力先として設定する
-        vc.inject(presenter: presenter)
+        vc.inject(presenter: presenter) // output先が登録されているPresenterインスタンスを引数として渡す
         
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
